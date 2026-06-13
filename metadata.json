@@ -1,0 +1,6 @@
+{
+  "name": "Matrix Gezegeni",
+  "description": "Matrix temalı kod yağmurları, dijital böcek virüsleri dalgaları, taktiksel savaş istatistikleri modülü ve sürükleyici tam ekran simülasyon modu içeren fütüristik uzay gemisi savaş oyunu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
