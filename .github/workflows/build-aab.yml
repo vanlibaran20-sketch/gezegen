@@ -1,0 +1,15 @@
+name: Build AAB
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm install -g eas-cli && npm install
+      - name: EAS Token
+        env: { EAS_BUILD_TOKEN: ${{ secrets.EAS_TOKEN }} }
+        run: eas build --platform android --profile release --non-interactive
+      - uses: actions/upload-artifact@v4
+        with: { name: app-release.aab, path: "*.aab" }
